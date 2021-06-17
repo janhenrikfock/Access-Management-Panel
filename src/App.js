@@ -1,11 +1,8 @@
 import './App.css'
+import Header from './Components/Header/Header'
 
 function App() {
-  return (
-    <>
-      <h1>Tutech Access Control</h1>
-    </>
-  )
+  return <Header></Header>
 }
 
 export default App
