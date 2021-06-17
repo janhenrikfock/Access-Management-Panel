@@ -1,3 +1,7 @@
 * {
   box-sizing: border-box;
 }
+.gridContainer {
+  display: grid;
+  grid-template-columns: 35% auto;
+}
