@@ -1,12 +1,13 @@
 import './App.css'
 import Sidebar from './Components/Sidebar/Sidebar'
-import { workers } from './MockData/data'
+import { useOpenCompany } from './hooks/useOpenCompany'
 
 function App() {
+  const openCompany = useOpenCompany()
   return (
     <>
       <main className="gridContainer">
-        <Sidebar workers={workers} />
+        <Sidebar {...openCompany} />
       </main>
     </>
   )
