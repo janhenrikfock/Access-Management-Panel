@@ -62,6 +62,24 @@ export const personnel = [
     enddate: '20210286',
     company: 'GmbH & co.KG.',
   },
+  {
+    name: 'Darkwing',
+    surname: 'Duck',
+    id: 6760762309,
+    card: 673409,
+    role: 'none',
+    enddate: '20210286',
+    company: 'Extralanger Name und Söhne GmbH & co.KG.',
+  },
+  {
+    name: 'Mickey',
+    surname: 'Mouse',
+    id: 6760872309,
+    card: 694409,
+    role: 'none',
+    enddate: '20210286',
+    company: 'Zutech Innovation GmbH & co.KG',
+  },
 ]
 export const workers = personnel.reduce((res, person) => {
   if (!res[person.company]) {

@@ -1,7 +1,17 @@
+:root {
+  --backgroundSidebar: #242731;
+  --textSidebar: #878991;
+  --backgroundContainer: #f6f4f2;
+  --textHeadline: #292d34;
+  --textColor: #3b3b3b;
+  --activeColor: #d9604e;
+}
+
 * {
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 .gridContainer {
   display: grid;
-  grid-template-columns: 35% auto;
+  grid-template-columns: 32vh auto;
 }

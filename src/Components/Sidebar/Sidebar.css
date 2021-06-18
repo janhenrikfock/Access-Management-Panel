@@ -1,6 +1,9 @@
 .sidebar {
-  height: 85vh;
-  width: 35vh;
+  height: 100vh;
   padding: 1em;
-  background-color: lightgray;
+  background-color: var(--backgroundSidebar);
+}
+.logo,
+.companyList {
+  padding: 1em;
 }
