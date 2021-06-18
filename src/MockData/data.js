@@ -6,7 +6,7 @@ export const personnel = [
     card: 470826,
     role: 'admin',
     enddate: '20210286',
-    company: 'innovative ltd.',
+    company: 'Innovative ltd.',
   },
   {
     name: 'Marta',
@@ -15,7 +15,7 @@ export const personnel = [
     card: 789826,
     role: 'admin',
     enddate: '20210286',
-    company: 'innovative ltd.',
+    company: 'Innovative ltd.',
   },
   {
     name: 'Hermann',
@@ -42,7 +42,7 @@ export const personnel = [
     card: 437056,
     role: 'constricted',
     enddate: '20210286',
-    company: 'innovative ltd.',
+    company: 'Innovative ltd.',
   },
   {
     name: 'Peter',
@@ -63,3 +63,10 @@ export const personnel = [
     company: 'GmbH & co.KG.',
   },
 ]
+export const workers = personnel.reduce((res, person) => {
+  if (!res[person.company]) {
+    res[person.company] = []
+  }
+  res[person.company].push(person)
+  return res
+}, {})
