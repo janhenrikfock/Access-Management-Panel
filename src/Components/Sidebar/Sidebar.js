@@ -10,6 +10,7 @@ export default function Sidebar({ setOpenCompany }) {
       <ul className="companyList">
         {Object.entries(workers).map(([sectionName, worker]) => (
           <CompanyItem
+            key={sectionName}
             sectionName={sectionName}
             worker={worker}
             setOpenCompany={setOpenCompany}

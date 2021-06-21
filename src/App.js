@@ -5,14 +5,13 @@ import { useOpenCompany } from './hooks/useOpenCompany'
 
 function App() {
   const openCompany = useOpenCompany()
-  // openCompany.openCompany
-  //   ? console.log(openCompany.openCompany)
-  //   : console.log('nichts drin')
+
   return (
     <>
       <main className="gridContainer">
         <Sidebar {...openCompany} />
         <Workerlist {...openCompany} />
+        <div className="menu"></div>
       </main>
     </>
   )

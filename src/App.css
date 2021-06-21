@@ -13,5 +13,9 @@
 }
 .gridContainer {
   display: grid;
-  grid-template-columns: 32vh auto;
+  grid-template-columns: 32vh auto 32vh;
+}
+.menu {
+  margin: 1.5em 1.5em 1.5em 0;
+  background-color: var(--backgroundContainer);
 }

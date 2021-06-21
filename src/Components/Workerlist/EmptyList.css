@@ -1,0 +1,9 @@
+.emptyList {
+  margin: 4em;
+  display: grid;
+  place-items: center;
+}
+.emptyLogo {
+  height: 40%;
+  width: 40%;
+}
