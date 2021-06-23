@@ -37,7 +37,10 @@ Start the server
 ```bash
   npm start
 ```
+<<<<<<< HEAD
 
 ## Remote Repository:
 
 https://github.com/janhenrikfock/Access-Management-Panel
+=======
+>>>>>>> c751f9358b8a90f9d65fddf4563414477261af2f
