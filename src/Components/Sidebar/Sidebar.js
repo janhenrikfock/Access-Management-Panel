@@ -2,7 +2,11 @@ import './Sidebar.css'
 import CompanyItem from './CompanyItem'
 import logo from '../../images/logo.svg'
 
-export default function Sidebar({ sortedWorkers, setOpenCompany }) {
+export default function Sidebar({
+  sortedWorkers,
+  setOpenCompany,
+  setRenderNewWorker,
+}) {
   return (
     <div className="sidebar">
       <img className="logo" src={logo} alt="logo" />
@@ -16,6 +20,12 @@ export default function Sidebar({ sortedWorkers, setOpenCompany }) {
           />
         ))}
       </ul>
+      <button
+        className="button-newWorker"
+        onClick={() => setRenderNewWorker(true)}
+      >
+        Neuer Mitarbeiter
+      </button>
     </div>
   )
 }

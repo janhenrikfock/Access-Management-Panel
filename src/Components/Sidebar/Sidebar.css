@@ -7,3 +7,13 @@
 .companyList {
   padding: 1em;
 }
+.button-newWorker {
+  align-self: center;
+  display: block;
+  background-color: var(--activeColor);
+  border: none;
+  padding: 8px 15px;
+  border-radius: 2px;
+  color: white;
+  font-weight: bold;
+}
