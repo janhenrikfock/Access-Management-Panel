@@ -1,7 +1,7 @@
 import './Workerlist.css'
 import EmptyList from './EmptyList'
 
-export default function Workerlist({ openCompany }) {
+export default function Workerlist({ openCompany, setOpenPerson }) {
   // function changeSvgColor (defColor, activeColor){
 
   // }
@@ -11,7 +11,11 @@ export default function Workerlist({ openCompany }) {
       <h2 className="listHeadline">{openCompany[0].company}</h2>
       <ul className="workerlist">
         {openCompany.map((companyMember) => (
-          <li className="workerListItem" key={companyMember.id}>
+          <li
+            onClick={() => setOpenPerson(companyMember)}
+            className="workerListItem"
+            key={companyMember.id}
+          >
             <svg
               className="icon"
               xmlns="http://www.w3.org/2000/svg"

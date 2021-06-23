@@ -1,14 +1,13 @@
 import './Sidebar.css'
 import CompanyItem from './CompanyItem'
 import logo from '../../images/logo.svg'
-import { workers } from '../../MockData/data'
 
-export default function Sidebar({ setOpenCompany }) {
+export default function Sidebar({ sortedWorkers, setOpenCompany }) {
   return (
     <div className="sidebar">
       <img className="logo" src={logo} alt="logo" />
       <ul className="companyList">
-        {Object.entries(workers).map(([sectionName, worker]) => (
+        {Object.entries(sortedWorkers).map(([sectionName, worker]) => (
           <CompanyItem
             key={sectionName}
             sectionName={sectionName}

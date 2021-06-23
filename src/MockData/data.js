@@ -1,4 +1,4 @@
-export const personnel = [
+export const workerData = [
   {
     name: 'Max',
     surname: 'Mustermann',
@@ -81,10 +81,3 @@ export const personnel = [
     company: 'Zutech Innovation GmbH & co.KG',
   },
 ]
-export const workers = personnel.reduce((res, person) => {
-  if (!res[person.company]) {
-    res[person.company] = []
-  }
-  res[person.company].push(person)
-  return res
-}, {})
