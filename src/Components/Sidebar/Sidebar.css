@@ -1,13 +1,26 @@
 .sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   height: 100vh;
-  padding: 1em;
   background-color: var(--backgroundSidebar);
 }
-.logo,
-.companyList {
-  padding: 1em;
+.logo {
+  padding: 2em;
 }
-.button-newWorker {
+.companyList {
+  padding: 2em;
+  overflow-y: scroll;
+}
+
+.container__button--newworker {
+  display: grid;
+  place-items: center;
+  background-color: #1f222b;
+  height: 14vh;
+}
+.button--newWorker {
+  cursor: pointer;
   align-self: center;
   display: block;
   background: linear-gradient(

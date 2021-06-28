@@ -1,18 +1,33 @@
-.companyFolder {
-  margin-top: 10px;
+.companylist__listelement {
+  display: flex;
+  align-items: flex-start;
+  padding: 3px;
   color: var(--textSidebar);
+  stroke: var(--textSidebar);
   list-style: none;
-  margin-top: 15px;
+  margin-top: 13px;
   font-weight: bold;
-}
-.companyFolder:hover {
-  color: var(--activeColor);
   cursor: pointer;
-  transition: color 0.3s;
+  white-space: normal;
 }
-.itemLogo {
-  display: inline;
-  height: 20px;
-  width: 20px;
-  margin-right: 15px;
+.companylist__listelement:hover {
+  color: var(--activeColor);
+  stroke: var(--activeColor);
+  transition: color stroke 0.3s;
+}
+.companylist__listelement--logocontainer {
+  justify-content: flex-start;
+  margin-right: 10px;
+  min-height: 25px;
+  min-width: 25px;
+  max-height: 25px;
+  max-width: 25px;
+}
+.companylist__listelement--logo {
+  stroke: inherit;
+  fill: none;
+}
+.companylist__listelement--companyname {
+  color: inherit;
+  margin: 0;
 }

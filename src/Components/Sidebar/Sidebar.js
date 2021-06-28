@@ -20,12 +20,14 @@ export default function Sidebar({
           />
         ))}
       </ul>
-      <button
-        className="button-newWorker"
-        onClick={() => setRenderNewWorker(true)}
-      >
-        Neuer Mitarbeiter
-      </button>
+      <div className="container__button--newworker">
+        <button
+          className="button--newWorker"
+          onClick={() => setRenderNewWorker(true)}
+        >
+          Neuer Mitarbeiter
+        </button>
+      </div>
     </div>
   )
 }
