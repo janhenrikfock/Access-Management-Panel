@@ -64,7 +64,7 @@ export default function Modal({
             )}
             <label>Data.id</label>
             <p>{openPerson.id}</p>
-            <input type="submit" />
+            <input type="submit" value="Daten speichern" />
           </form>
         </div>
       </>

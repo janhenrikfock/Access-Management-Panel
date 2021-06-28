@@ -10,7 +10,16 @@
 .button-newWorker {
   align-self: center;
   display: block;
-  background-color: var(--activeColor);
+  background: linear-gradient(
+    #ff725d 0%,
+    #cb544e 0%,
+    #f26b58 0%,
+    #e66553 0%,
+    #c05043 0%,
+    #ee8849 100%,
+    #6d3027 100%
+  );
+  /* background-color: var(--activeColor); */
   border: none;
   padding: 8px 15px;
   border-radius: 2px;

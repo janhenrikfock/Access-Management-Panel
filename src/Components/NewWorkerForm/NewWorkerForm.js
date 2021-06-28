@@ -28,19 +28,31 @@ export default function NewWorkerForm({
         <div className="modalContainer">
           <h1 className="modalHeadline">Mitarbeiter anlegen:</h1>
           <form className="form" onSubmit={handleSubmit(onSubmit)}>
-            <label htmlFor="name">Name</label>
-            <input className="textinput" name="name" ref={register}></input>
-            <label htmlFor="surname">Nachname</label>
-            <input className="textinput" name="surname" ref={register}></input>
-            <label htmlFor="company">Firma</label>
-            <input className="textinput" name="company" ref={register} />
-            <label htmlFor="role">Zutrittsgruppe (Rolle)</label>
-            <input className="textinput" name="role" ref={register} />
-            <label htmlFor="card">Kartennummer (mind 6 Ziffern)</label>
-            <input className="textinput" name="card" ref={register} />
-            <label htmlFor="id">Data.id</label>
-            <input className="textinput" name="id" ref={register}></input>
-            <input type="submit" />
+            <label className="inputLabel" htmlFor="name">
+              Name
+            </label>
+            <input className="textInput" name="name" ref={register}></input>
+            <label className="inputLabel" htmlFor="surname">
+              Nachname
+            </label>
+            <input className="textInput" name="surname" ref={register}></input>
+            <label className="inputLabel" htmlFor="company">
+              Firma
+            </label>
+            <input className="textInput" name="company" ref={register} />
+            <label className="inputLabel" htmlFor="role">
+              Zutrittsgruppe (Rolle)
+            </label>
+            <input className="textInput" name="role" ref={register} />
+            <label className="inputLabel" htmlFor="card">
+              Kartennummer (mind 6 Ziffern)
+            </label>
+            <input className="textInput" name="card" ref={register} />
+            <label className="inputLabel" htmlFor="id">
+              Data.id
+            </label>
+            <input className="textInput" name="id" ref={register}></input>
+            <input className="submit" type="submit" value="Daten speichern" />
           </form>
         </div>
       </>

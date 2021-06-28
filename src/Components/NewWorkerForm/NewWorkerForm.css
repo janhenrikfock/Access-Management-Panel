@@ -10,6 +10,7 @@
 .modalHeadline {
   padding: 2em;
   margin: 0;
+  color: #3b3b3b;
 }
 .modalContainer {
   display: flex;
@@ -29,7 +30,17 @@
   flex-direction: column;
   overflow-y: scroll;
 }
-.textinput {
+
+.inputLabel {
+  color: #b6b6b6;
+}
+.textInput {
   margin: 10px;
   padding: 5px;
+  border-radius: 2px;
+  border: 1px solid rgb(190, 190, 190);
+  outline: 1px;
+}
+.submit {
+  color: #3b3b3b;
 }
