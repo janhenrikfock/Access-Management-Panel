@@ -28,6 +28,7 @@
   fill: none;
 }
 .companylist__listelement--companyname {
+  padding-top: 3px;
   color: inherit;
   margin: 0;
 }

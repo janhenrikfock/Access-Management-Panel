@@ -1,19 +1,16 @@
 .workerlist__workeritem {
   border-radius: 2px;
-  padding: 7px 0;
+  padding: 7px 10px;
   display: grid;
-  grid-template-columns: 42% auto;
+  grid-template-columns: 25% 25% auto;
   min-height: 27px;
   cursor: pointer;
-  stroke: #878991;
   fill: #878991;
 }
 .workerlist__workeritem:hover {
-  transition: color fill stroke border-bottom 0.8s;
-  border-bottom: 1px solid var(--activeColor);
-  color: var(--activeColor);
+  transition: fill background 0.8s;
   fill: var(--activeColor);
-  stroke: var(--activeColor);
+  background: var(--hoverGradient);
 }
 .workerlist__workeritem--icondata {
   display: flex;
@@ -31,10 +28,7 @@
   fill: inherit;
   stroke: none;
 }
-.worker__listitem--iconstroke {
-  stroke: inherit;
-  fill: none;
-}
+
 .workerlist__listitem--data {
   font-size: 16px;
   margin: 0;
