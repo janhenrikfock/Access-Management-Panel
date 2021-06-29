@@ -20,9 +20,9 @@ export default function CompanyItem({ sectionName, worker, setOpenCompany }) {
             data-name="Icon feather-folder"
             d="M32.567,27.742a2.931,2.931,0,0,1-2.957,2.905H5.957A2.931,2.931,0,0,1,3,27.742V7.405A2.931,2.931,0,0,1,5.957,4.5h7.392l2.957,4.358H29.61a2.931,2.931,0,0,1,2.957,2.905Z"
             transform="translate(-1.5 -3)"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
           />
         </svg>
 

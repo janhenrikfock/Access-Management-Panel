@@ -1,41 +1,12 @@
-.listHeadline {
-  padding: 0.2em;
-}
-
-.listContainer {
+.workerlist__container {
   margin: 4em;
 }
-
+.workerlist__headline {
+  padding: 0.2em;
+}
 .workerlist {
   margin: 0;
   padding: 0;
   list-style: none;
   color: var(--textColor);
-}
-
-.workerListItem {
-  margin-top: 7px;
-  padding-left: 1em;
-  display: grid;
-  grid-template-columns: 4% 25% 40% 4% auto;
-  font-size: 14px;
-  background-color: var(--backgroundContainer);
-  cursor: pointer;
-}
-.workerListItem:hover {
-  transition: color box-shadow margin-top margin-botton 0.8s;
-  margin-top: 5px 0 2px 0;
-  box-shadow: 0px 2px 5px 0px var(--backgroundSidebar);
-  color: var(--activeColor);
-}
-.icon {
-  margin: 1em 0;
-  display: inline-block;
-  height: 20px;
-  display: inline-block;
-}
-
-.itemText {
-  height: 20px;
-  line-height: 20px;
 }

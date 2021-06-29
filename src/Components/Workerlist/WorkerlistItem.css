@@ -1,0 +1,41 @@
+.workerlist__workeritem {
+  border-radius: 2px;
+  padding: 7px 0;
+  display: grid;
+  grid-template-columns: 42% auto;
+  min-height: 27px;
+  cursor: pointer;
+  stroke: #878991;
+  fill: #878991;
+}
+.workerlist__workeritem:hover {
+  transition: color fill stroke border-bottom 0.8s;
+  border-bottom: 1px solid var(--activeColor);
+  color: var(--activeColor);
+  fill: var(--activeColor);
+  stroke: var(--activeColor);
+}
+.workerlist__workeritem--icondata {
+  display: flex;
+  align-items: flex-start;
+}
+.workerlist__listitem--iconcontainer {
+  margin: 0;
+  min-height: 25px;
+  min-width: 25px;
+  max-height: 25px;
+  max-width: 25px;
+  padding-right: 10px;
+}
+.workerlist__listitem--iconfill {
+  fill: inherit;
+  stroke: none;
+}
+.worker__listitem--iconstroke {
+  stroke: inherit;
+  fill: none;
+}
+.workerlist__listitem--data {
+  font-size: 16px;
+  margin: 0;
+}
