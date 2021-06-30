@@ -8,10 +8,53 @@ export default {
 }
 const Template = (args) => <CompanyItem {...args} />
 
-export const CompanyNames = Template.bind({})
-
-CompanyNames.args = {
-  sectionName: 'Sehr langer Firmenname GmbH',
+export const Primary = Template.bind({})
+Primary.args = {
+  sectionName: 'Primary GmbH',
+  setOpenCompany: () => {
+    return {
+      name: 'name',
+      surname: 'surname',
+      id: 765432,
+      company: 'companyname',
+      role: 'role',
+      enddate: '20202020',
+    }
+  },
+  worker: {
+    name: 'name',
+    surname: 'surname',
+    id: 765432,
+    company: 'companyname',
+    role: 'role',
+    enddate: '20202020',
+  },
+}
+export const LongName = Template.bind({})
+LongName.args = {
+  sectionName: 'Sehr langer Firmenname GmbH & Co.KG',
+  setOpenCompany: () => {
+    return {
+      name: 'name',
+      surname: 'surname',
+      id: 765432,
+      company: 'companyname',
+      role: 'role',
+      enddate: '20202020',
+    }
+  },
+  worker: {
+    name: 'name',
+    surname: 'surname',
+    id: 765432,
+    company: 'companyname',
+    role: 'role',
+    enddate: '20202020',
+  },
+}
+export const ShortName = Template.bind({})
+ShortName.args = {
+  sectionName: 'OK AG',
   setOpenCompany: () => {
     return {
       name: 'name',
