@@ -1,20 +1,34 @@
 import React from 'react'
 
-import NewWorkerForm from './NewWorkerForm'
+import Modal from './Modal'
 
 export default {
-  title: 'Modal New Worker/NewWorkerForm',
-  component: NewWorkerForm,
+  title: 'Adjust Worker/Workerdata',
+  component: Modal,
 }
-const Template = (args) => <NewWorkerForm {...args} />
+const Template = (args) => <Modal {...args} />
 
 export const Primary = Template.bind({})
 Primary.args = {
-  renderNewWorker: () => {
-    return true
+  openPerson: {
+    name: 'name',
+    surname: 'surname',
+    id: 765432,
+    company: 'companyname',
+    role: 'role',
+    enddate: '20202020',
+    card: 470826,
   },
-  setRenderNewWorker: () => {
-    return true
+  setOpenPerson: () => {
+    return {
+      name: 'name',
+      surname: 'surname',
+      id: 765432,
+      company: 'companyname',
+      role: 'role',
+      enddate: '20202020',
+      card: 470826,
+    }
   },
   workers: [
     {
