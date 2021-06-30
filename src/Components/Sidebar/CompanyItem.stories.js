@@ -5,6 +5,21 @@ import CompanyItem from './CompanyItem'
 export default {
   title: 'Sidebar/Listitem',
   component: CompanyItem,
+  decorators: [
+    (CompanyItem) => (
+      <div
+        style={{
+          width: '40vh',
+          background: '#242731',
+          height: '100vh',
+          padding: '1em',
+          margin: '0',
+        }}
+      >
+        <CompanyItem />
+      </div>
+    ),
+  ],
 }
 const Template = (args) => <CompanyItem {...args} />
 
