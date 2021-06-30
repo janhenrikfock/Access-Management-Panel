@@ -10,7 +10,7 @@ https://access-management-panel.vercel.app/
 
 ## Created with npx create-react-app
 
-Bootstrapped with a react app. The following Commands are available.
+Bootstrapped with create-react-app. The following Commands are available.
 
 ## Run Locally
 
@@ -32,10 +32,18 @@ Install dependencies
   npm install
 ```
 
-Start the server
+## Start the server
 
 ```bash
   npm start
+```
+
+## Run Storybook
+
+To run storybook, run the following command:
+
+```bash
+  npm run storybook
 ```
 
 ## Remote Repository:
