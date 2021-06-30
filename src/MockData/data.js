@@ -78,7 +78,7 @@ export const workerData = [
     card: 694409,
     role: 'none',
     enddate: '20210286',
-    company: 'Zutech Innovation GmbH & co.KG',
+    company: 'Techies Innovation GmbH & co.KG',
   },
   {
     name: 'Minnie',
