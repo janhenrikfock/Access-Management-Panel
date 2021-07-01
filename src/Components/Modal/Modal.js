@@ -7,8 +7,12 @@ export default function Modal({
   setOpenPerson,
   workers,
   setWorkers,
+  openCompany,
+  setOpenCompany,
 }) {
   const { register, handleSubmit, setValue, errors } = useForm()
+
+  // Prefill Inputfields
   useEffect(() => {
     if (openPerson) {
       setValue('company', openPerson.company)
@@ -17,6 +21,9 @@ export default function Modal({
     }
   }, [openPerson, setValue])
 
+  // Save Company as Sectionname
+
+  //Handle Submit
   const onSubmit = (data) => {
     const updatedData = {
       name: openPerson.name,
@@ -29,12 +36,26 @@ export default function Modal({
     const markedIndex = workers.findIndex(
       (worker) => worker.id === openPerson.id
     )
+
     const prev = workers.slice(0, markedIndex)
     const following = workers.slice(markedIndex + 1)
 
-    const newArray = [...prev, updatedData, ...following]
+    const newWorkerArray = [...prev, updatedData, ...following]
 
-    setWorkers(newArray)
+    const indexCompanyMember = openCompany.findIndex(
+      (person) => person.id === openPerson.id
+    )
+
+    const prevCompanyMembers = openCompany.slice(0, indexCompanyMember)
+    const followingCompanyMembers = openCompany.slice(indexCompanyMember + 1)
+    const newOpenCompany = [
+      ...prevCompanyMembers,
+      updatedData,
+      ...followingCompanyMembers,
+    ]
+
+    setWorkers(newWorkerArray)
+    setOpenCompany(newOpenCompany)
     setOpenPerson()
   }
 
@@ -48,10 +69,26 @@ export default function Modal({
           <h1 className="modalHeadline">Mitarbeiter bearbeiten:</h1>
           <form className="form" onSubmit={handleSubmit(onSubmit)}>
             <h2>{openPerson.name + ' ' + openPerson.surname}</h2>
+
             <label htmlFor="company">Firma</label>
-            <input className="textinput" name="company" ref={register} />
+            <input
+              className="textinput"
+              name="company"
+              ref={register({ required: true, minLength: 2 })}
+            />
+            {errors.company && (
+              <p>*Ein Firmenname muss angegeben werden. Mind 2 Zeichen.</p>
+            )}
+
             <label htmlFor="role">Zutrittsgruppe (Rolle)</label>
-            <input className="textinput" name="role" ref={register} />
+            <input
+              className="textinput"
+              name="role"
+              ref={register({ required: true, minLength: 4 })}
+            />
+            {errors.role && (
+              <p>*Ein Rollenname muss mindestens 4 Zeichen lan sein</p>
+            )}
 
             <label htmlFor="card">Kartennummer (mind 6 Ziffern)</label>
             <input
@@ -60,10 +97,12 @@ export default function Modal({
               ref={register({ required: true, minLength: 6 })}
             />
             {errors.card && (
-              <p>Die Kartennummer muss mindestens 6 Ziffern haben</p>
+              <p>*Die Kartennummer muss mindestens 6 Ziffern haben</p>
             )}
+
             <label>Data.id</label>
             <p>{openPerson.id}</p>
+
             <input type="submit" value="Daten speichern" />
           </form>
         </div>

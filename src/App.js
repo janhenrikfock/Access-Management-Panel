@@ -19,7 +19,7 @@ function App() {
       <main className="gridContainer">
         <Sidebar {...workers} {...openCompany} {...renderNewWorker} />
         <Workerlist {...openCompany} {...openPerson} />
-        <Modal {...openPerson} {...workers} />
+        <Modal {...openPerson} {...workers} {...openCompany} />
         <NewWorkerForm {...renderNewWorker} {...workers} />
       </main>
     </>

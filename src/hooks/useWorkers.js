@@ -11,7 +11,7 @@ export function useWorkers() {
     res[person.company].push(person)
     return res
   }, {})
-  console.log(sortedWorkers)
+
   return {
     workers,
     sortedWorkers,
