@@ -31,14 +31,14 @@ export default function Modal({
       card: data.card,
     }
 
-    const markedIndex = findIndexOpenWorker(workers, openPerson)
-    const otherWorkers = extractOtherWorkers(markedIndex, workers)
+    const indexMarkedWorker = findIndexOpenWorker(workers, openPerson)
+    const otherWorkers = extractOtherWorkers(indexMarkedWorker, workers)
+    setWorkers([...otherWorkers, updatedWorker])
 
     const indexCompanyMember = findIndexOpenWorker(openCompany, openPerson)
     const restOfCompany = extractOtherWorkers(indexCompanyMember, openCompany)
-
-    setWorkers([...otherWorkers, updatedWorker])
     setOpenCompany([...restOfCompany, updatedWorker])
+
     setOpenPerson()
   }
 
@@ -93,6 +93,7 @@ export default function Modal({
     )
   }
 }
+
 function findIndexOpenWorker(arrayOfWorkers, openPerson) {
   const indexOpenWorker = arrayOfWorkers.findIndex(
     (oneWorker) => oneWorker.id === openPerson.id
