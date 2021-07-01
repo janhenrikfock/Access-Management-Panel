@@ -21,11 +21,8 @@ export default function Modal({
     }
   }, [openPerson, setValue])
 
-  // Save Company as Sectionname
-
-  //Handle Submit
   const onSubmit = (data) => {
-    const updatedData = {
+    const updatedWorker = {
       name: openPerson.name,
       surname: openPerson.surname,
       id: openPerson.id,
@@ -33,29 +30,15 @@ export default function Modal({
       company: data.company,
       card: data.card,
     }
-    const markedIndex = workers.findIndex(
-      (worker) => worker.id === openPerson.id
-    )
 
-    const prev = workers.slice(0, markedIndex)
-    const following = workers.slice(markedIndex + 1)
+    const markedIndex = findIndexOpenWorker(workers, openPerson)
+    const otherWorkers = extractOtherWorkers(markedIndex, workers)
 
-    const newWorkerArray = [...prev, updatedData, ...following]
+    const indexCompanyMember = findIndexOpenWorker(openCompany, openPerson)
+    const restOfCompany = extractOtherWorkers(indexCompanyMember, openCompany)
 
-    const indexCompanyMember = openCompany.findIndex(
-      (person) => person.id === openPerson.id
-    )
-
-    const prevCompanyMembers = openCompany.slice(0, indexCompanyMember)
-    const followingCompanyMembers = openCompany.slice(indexCompanyMember + 1)
-    const newOpenCompany = [
-      ...prevCompanyMembers,
-      updatedData,
-      ...followingCompanyMembers,
-    ]
-
-    setWorkers(newWorkerArray)
-    setOpenCompany(newOpenCompany)
+    setWorkers([...otherWorkers, updatedWorker])
+    setOpenCompany([...restOfCompany, updatedWorker])
     setOpenPerson()
   }
 
@@ -109,4 +92,16 @@ export default function Modal({
       </>
     )
   }
+}
+function findIndexOpenWorker(arrayOfWorkers, openPerson) {
+  const indexOpenWorker = arrayOfWorkers.findIndex(
+    (oneWorker) => oneWorker.id === openPerson.id
+  )
+  return indexOpenWorker
+}
+
+function extractOtherWorkers(index, array) {
+  const newWorkers = [...array]
+  newWorkers.splice(index, 1)
+  return newWorkers
 }
