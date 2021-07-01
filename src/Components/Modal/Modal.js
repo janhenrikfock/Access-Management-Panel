@@ -70,7 +70,7 @@ export default function Modal({
               ref={register({ required: true, minLength: 4 })}
             />
             {errors.role && (
-              <p>*Ein Rollenname muss mindestens 4 Zeichen lan sein</p>
+              <p>*Ein Rollenname muss mindestens 4 Zeichen lang sein</p>
             )}
 
             <label htmlFor="card">Kartennummer (mind 6 Ziffern)</label>
