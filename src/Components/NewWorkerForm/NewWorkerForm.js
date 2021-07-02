@@ -1,4 +1,5 @@
 import './NewWorkerForm.css'
+import PropTypes from 'prop-types'
 import { useForm } from 'react-hook-form'
 
 export default function NewWorkerForm({
@@ -60,4 +61,10 @@ export default function NewWorkerForm({
   } else {
     return null
   }
+}
+NewWorkerForm.propTypes = {
+  renderNewWorker: PropTypes.bool,
+  setRenderNewWorker: PropTypes.func,
+  workers: PropTypes.array,
+  setWorkers: PropTypes.func,
 }

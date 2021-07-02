@@ -1,12 +1,9 @@
 import './Workerlist.css'
 import WorkerlistItem from './WorkerlistItem'
 import EmptyList from './EmptyList'
+import PropTypes from 'prop-types'
 
 export default function Workerlist({ openCompany, setOpenPerson }) {
-  // function changeSvgColor (defColor, activeColor){
-
-  // }
-
   return openCompany ? (
     <div className="workerlist__container">
       <h2 className="workerlist__headline">{openCompany[0].company}</h2>
@@ -25,4 +22,8 @@ export default function Workerlist({ openCompany, setOpenPerson }) {
       <EmptyList />
     </>
   )
+}
+Workerlist.propTypes = {
+  openCompany: PropTypes.array,
+  setOpenPerson: PropTypes.func,
 }

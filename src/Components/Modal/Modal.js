@@ -1,4 +1,5 @@
 import './Modal.css'
+import PropTypes from 'prop-types'
 import { useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 
@@ -42,7 +43,7 @@ export default function Modal({
     setOpenPerson()
   }
 
-  if (openPerson === undefined || openPerson === {}) {
+  if (openPerson === undefined) {
     return null
   } else {
     return (
@@ -92,6 +93,15 @@ export default function Modal({
       </>
     )
   }
+}
+
+Modal.propTypes = {
+  openPerson: PropTypes.object,
+  setOpenPerson: PropTypes.func,
+  workers: PropTypes.array,
+  setWorkers: PropTypes.func,
+  openCompany: PropTypes.array,
+  setOpenCompany: PropTypes.func,
 }
 
 function findIndexOpenWorker(arrayOfWorkers, openPerson) {

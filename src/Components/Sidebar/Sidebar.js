@@ -1,4 +1,5 @@
 import './Sidebar.css'
+import PropTypes from 'prop-types'
 import CompanyItem from './CompanyItem'
 import logo from '../../images/logo.svg'
 
@@ -30,4 +31,9 @@ export default function Sidebar({
       </div>
     </div>
   )
+}
+Sidebar.propTypes = {
+  sortedWorkers: PropTypes.object,
+  setOpenCompany: PropTypes.func,
+  setRenderNewWorker: PropTypes.func,
 }

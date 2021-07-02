@@ -1,4 +1,6 @@
 import './WorkerlistItem.css'
+import PropTypes from 'prop-types'
+
 export default function WorkerlistItem({ companyMember, setOpenPerson }) {
   return (
     <li
@@ -49,4 +51,8 @@ export default function WorkerlistItem({ companyMember, setOpenPerson }) {
       <p className="workerlist__listitem--data">Role: {companyMember.role}</p>
     </li>
   )
+}
+WorkerlistItem.propTypes = {
+  companyMember: PropTypes.object,
+  setOpenPerson: PropTypes.func,
 }
