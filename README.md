@@ -46,6 +46,22 @@ To run storybook, run the following command:
   npm run storybook
 ```
 
+## Tools and Libraries:
+
+# Storybook:
+
+```
+https://www.npmjs.com/package/storybook
+```
+
+# Proptypes
+
+(installed as dependency of Storybook)
+
+```
+https://www.npmjs.com/package/prop-types
+```
+
 ## Remote Repository:
 
 https://github.com/janhenrikfock/Access-Management-Panel
