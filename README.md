@@ -48,13 +48,13 @@ To run storybook, run the following command:
 
 ## Tools and Libraries:
 
-# Storybook:
+### Storybook:
 
 ```
 https://www.npmjs.com/package/storybook
 ```
 
-# Proptypes
+### Proptypes
 
 (installed as dependency of Storybook)
 
@@ -62,6 +62,13 @@ https://www.npmjs.com/package/storybook
 https://www.npmjs.com/package/prop-types
 ```
 
-## Remote Repository:
+### react-hook-form
+
+```
+https://www.npmjs.com/package/react-hook-form
+
+```
+
+### Remote Repository:
 
 https://github.com/janhenrikfock/Access-Management-Panel

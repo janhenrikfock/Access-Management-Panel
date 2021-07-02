@@ -8,7 +8,7 @@ export default function NewWorkerForm({
   workers,
   setWorkers,
 }) {
-  const { register, handleSubmit } = useForm()
+  const { register, handleSubmit, errors } = useForm()
 
   function onSubmit(data, e) {
     const newArray = [...workers, { ...data }]
@@ -32,27 +32,63 @@ export default function NewWorkerForm({
             <label className="inputLabel" htmlFor="name">
               Name
             </label>
-            <input className="textInput" name="name" ref={register}></input>
+            <input
+              className="textInput"
+              name="name"
+              ref={register({ required: true })}
+            ></input>
+            {errors.name && <p>*Gib den Vornamen ein</p>}
+
             <label className="inputLabel" htmlFor="surname">
               Nachname
             </label>
-            <input className="textInput" name="surname" ref={register}></input>
+            <input
+              className="textInput"
+              name="surname"
+              ref={register({ required: true })}
+            />
+            {errors.surname && <p>*Gib den Nachnamen ein</p>}
+
             <label className="inputLabel" htmlFor="company">
               Firma
             </label>
-            <input className="textInput" name="company" ref={register} />
+            <input
+              className="textInput"
+              name="company"
+              ref={register({ required: true })}
+            />
+            {errors.company && <p>*Gib den Firmennamen ein</p>}
+
             <label className="inputLabel" htmlFor="role">
               Zutrittsgruppe (Rolle)
             </label>
-            <input className="textInput" name="role" ref={register} />
+            <input
+              className="textInput"
+              name="role"
+              ref={register({ required: true })}
+            />
+            {errors.role && <p>*Gib den namen der Zugangsrolle ein</p>}
+
             <label className="inputLabel" htmlFor="card">
               Kartennummer (mind 6 Ziffern)
             </label>
-            <input className="textInput" name="card" ref={register} />
+            <input
+              className="textInput"
+              name="card"
+              ref={register({ required: true })}
+            />
+            {errors.card && <p>*Gib die Seriennummer der Accesskarte ein</p>}
+
             <label className="inputLabel" htmlFor="id">
               Data.id
             </label>
-            <input className="textInput" name="id" ref={register}></input>
+            <input
+              className="textInput"
+              name="id"
+              ref={register({ required: true })}
+            ></input>
+            {errors.id && <p>*Gib eine gültige data-id ein</p>}
+
             <input className="submit" type="submit" value="Daten speichern" />
           </form>
         </div>
